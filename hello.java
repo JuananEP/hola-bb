@@ -13,10 +13,21 @@ public class Main
   public static void main (String[]args)
   {
     String entradaTeclado = "";
-      System.out.print ("Introduce tu puto nombre: ");
-    Scanner entradaEscaner = new Scanner (System.in);
-      entradaTeclado = entradaEscaner.nextLine ();
+      entradaTeclado = PreguntarTeclado ();
+      imprimir (entradaTeclado);
+  }
 
-      System.out.println ("Hey " + entradaTeclado);
+  public static String PreguntarTeclado ()
+  {
+    System.out.print ("Introduce tu puto nombre: ");
+    Scanner entradaEscaner = new Scanner (System.in);
+    return entradaEscaner.nextLine ();
+
+  }
+
+  public static void imprimir (String entradaTeclado)
+  {
+    System.out.println ("Hey " + entradaTeclado);
+
   }
 }
